@@ -1,0 +1,57 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+
+   
+}
+
+.calcuBody {
+    box-sizing: calc(100px 150px);
+    position: relative;
+    background-color: bisque;
+
+
+}
+
+.wrapper{
+    width: 300px;
+    height: 100px;
+    background-color: blue;
+
+}
+
+button {
+    width: 80px;
+    font-size: 14px;
+    font-family: "Arial";
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 0 3px #3a3939;
+    
+}
+.grid {
+    gap: 0px;
+}
+
+#zero {
+
+    width: 160px;
+
+}
+
+.container{
+    width:20%;
+}
+
+button:hover{
+
+    color: #000;
+}
+
+button:active{
+
+    box-shadow: 0 1px #3a3939;
+    transform: translateY(2px);
+}
