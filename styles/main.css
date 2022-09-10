@@ -2,10 +2,10 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after{
+/* *, *::before, *::after{
 
    
-}
+} */
 
 .calcuBody {
     box-sizing: calc(100px 150px);
@@ -18,7 +18,8 @@ html {
 .wrapper{
     width: 300px;
     height: 100px;
-    background-color: blue;
+    
+    /* background-color: blue; */
 
 }
 
@@ -33,6 +34,7 @@ button {
 }
 .grid {
     gap: 0px;
+   
 }
 
 #zero {
@@ -40,6 +42,11 @@ button {
     width: 160px;
 
 }
+
+#multi, #divide, #equal, #plus, #minus{
+    background-color: coral;
+
+} 
 
 .container{
     width:20%;
@@ -54,4 +61,13 @@ button:active{
 
     box-shadow: 0 1px #3a3939;
     transform: translateY(2px);
+}
+
+output{
+    text-align: right;
+    min-width: 300px;
+    min-height: 30px;
+    font-size: 24px;
+    border:(5 solid #a5a5a1);
+    color: black;
 }

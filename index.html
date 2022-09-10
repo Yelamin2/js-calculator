@@ -18,82 +18,90 @@
     <section class="wrapper">
         <!-- create main container for the display for the calculator -->
         <div class="container calcuBody gx-0">
-            <div class="row grid gx-0">
-                <div class="col-12">
-                    <output id="results" class="results-box">
+            <div class="row"></div>
+                <div class="row grid gx-0">
+                    <div class="col-12">
+                        <output 
+                        id="display" 
+                        class="display-box"
+                        type="text" 
+                        placeholder="0" >
+                            
 
-                    </output>
+                        </output>
+                    </div>
                 </div>
-            </div>
-            <div class="row grid gx-0">
-                <div class="col-3">
-                    <button id="allC">AC</button>
+                <div class="row grid gx-0">
+                    <div class="col-3">
+                        <button data-operation class="allCKey " id="allclear">AC</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-operation class="plusminusKey " id="plusminus">+/-</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-operation class="percentKey " id ="percent">%</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-operation class="divideKey " id ="divide">÷</button>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <button id="plusminus">+/-</button>
+                <div class="row grid gx-0">
+                    <div class="col-3">
+                        <button data-number class="sevenKey " id ="seven ">7</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-number class="eightKey " id ="eight ">8</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-number class="nineKey " id ="nine ">9</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-operation class="multiKey " id ="multi">×</button>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <button id ="percent">%</button>
+                <div class="row grid gx-0">
+                    <div class="col-3">
+                        <button data-number class="fourKey " id ="four ">4</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-number class="fiveKey " id =" five">5</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-number class="sixKey " id ="six ">6</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-operation class="minusKey " id ="minus">-</button>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <button id ="divide">÷</button>
-                </div>
-            </div>
-            <div class="row grid gx-0">
-                <div class="col-3">
-                    <button id ="seven ">7</button>
-                </div>
-                <div class="col-3">
-                    <button id ="eight ">8</button>
-                </div>
-                <div class="col-3">
-                    <button id ="nine ">9</button>
-                </div>
-                <div class="col-3">
-                    <button id ="multi">×</button>
-                </div>
-            </div>
-            <div class="row grid gx-0">
-                <div class="col-3">
-                    <button id ="four ">4</button>
-                </div>
-                <div class="col-3">
-                    <button id =" five">5</button>
-                </div>
-                <div class="col-3">
-                    <button id ="six ">6</button>
-                </div>
-                <div class="col-3">
-                    <button id ="minus">-</button>
-                </div>
-            </div>
-            <div class="row grid gx-0">
-                <div class="col-3">
-                    <button id ="one">1</button>
-                </div>
-                <div class="col-3">
-                    <button id ="two">2</button>
-                </div>
-                <div class="col-3">
-                    <button id ="three">3</button>
-                </div>
-                <div class="col-3">
-                    <button id ="plus">+</button>
-                </div>
-            </div>
-            <div class="row grid gx-0">
-                <div class="col-6">
-                    <button id ="zero">0</button>
+                <div class="row grid gx-0">
+                    <div class="col-3">
+                        <button data-number class="oneKey " id ="one">1</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-number class="twoKey " id ="two">2</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-number class="threeKey " id ="three">3</button>
+                    </div>
+                    <div class="col-3">
+                        <button data-operation class="plusKey " id ="plus">+</button>
+                    </div>
                 </div>
                 <div class="row grid gx-0">
                     <div class="col-6">
-                        <button id ="point">.</button>
+                        <button data-number class="zeroKey " id ="zero">0</button>
                     </div>
-                    <div class="col-6">
-                        <button id ="equal">=</button>
+                    <div class="row grid gx-0">
+                        <div class="col-6">
+                            <button data-number class="decimalKey " id ="decimal">.</button>
+                        </div>
+                        <div class="col-6">
+                            <button data-operation class="equalsKey " id ="equals">=</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
             
         </div>
     </section>
