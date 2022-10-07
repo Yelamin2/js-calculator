@@ -15,11 +15,17 @@
     let opResults = null; 
     let decimalholder= false;
     let percentchecker= false;
+    let eqchecker= false;
     
 
     numbers.map(numbers => {
 
         numbers.addEventListener('click', (e)=> {
+            if(eqchecker===true){
+                displayedNum ='';
+                eqchecker=false;
+            }
+            // lastoperatorClick = '';
             //check if there was a decimal in the array
             if(e.target.innerText==='.' && Array.from(displayedNum).includes('.')){
                 
@@ -35,7 +41,7 @@
              display.innerText  = displayedNum;
            
 
-            console.log([display.innerText]);
+            console.log('display innertext',[display.innerText]);
             console.log( 'I am running', displayedNum);
             
         });
@@ -46,6 +52,14 @@
 
         //create an event listener for a click
         operators.addEventListener('click', (e)=> {
+
+            console.log(opResults, 'This is the operation results before');
+            // if(opResults){
+            //     return;
+            // }
+
+            console.log(Array.from(opResults), 'This is the operation resultsm after')
+            
          
 
             const operationName = e.target.innerText;
@@ -54,7 +68,7 @@
 
             if(storeResult && lastoperatorClick && opResults ){
                 
-                console.log(storeResult,'storeresult', opResults,'store2 result', displayedNum);
+                console.log(storeResult,'storeresult', opResults,'store2 result','displayed num=>', Array.from(displayedNum));
                 
                 operationMath();
                 
@@ -62,7 +76,7 @@
             else {
                 opResults= parseFloat(displayedNum);
 
-                //console.log('else ', storeResult,'storeresult', 'store2 result', displayedNum);
+                console.log('else ', storeResult,'storeresult', 'store2 result', displayedNum);
             }
             
             shifter(operationName);
@@ -77,10 +91,10 @@
 
     });
 
-     // shifts the variables storage to three variables.
+    // shifts the variables storage to three variables.
     function shifter(name){
-        storeResult += displayedNum + '' + name + '';
-        diplay2.innerText = storeResult;
+        storeResult += displayedNum ;
+        display2.innerText = storeResult+ '' + name + '';
         //display.innerText='';
         displayedNum='';
         display3.innerText = opResults;
@@ -105,7 +119,8 @@
             displayedNum = parseFloat(displayedNum)/100;
         }
             //opResults = storeResult-diplayedNum;
-            console.log('Iam a minus!',opResults);
+            console.log('Iam a opResults!',opResults);
+            lastoperatorClick='';
         }
 
     
@@ -116,8 +131,9 @@
         display.innerText = opResults;
         displayedNum=opResults;
         display3.innerText='';
-        diplay2.innerText='';
+        display2.innerText='';
         storeResult='';
+        eqchecker=true;
 
 
     });
@@ -128,17 +144,17 @@
             storeResult = 0;
             displayedNum = 0;
             display3.innerText='0';
-            diplay2.innerText='0';
+            display2.innerText='0';
         
         });
 
-        percentage.addEventListener('click', (e) => {
+    percentage.addEventListener('click', (e) => {
             displayedNum = parseFloat(displayedNum)/100;
             display.innerText= displayedNum;
             percentchecker=true;
         });
 
-        plusminus.addEventListener('click', (e) =>{
+    plusminus.addEventListener('click', (e) =>{
             displayedNum = parseFloat(displayedNum)*(-1);
             display.innerText= displayedNum;
 
